@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Car</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .header {
+	    text-align: center;
+	    background-color: #333;
+	    color: #fff;
+	    padding: 10px;
+	    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .form-container {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 400px;
+    }
+    .form-title {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .label-container {
+        display: flex;
+        justify-content: center;
+    }
+    .centered-label {
+        text-align: center;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #5F9EA0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    input[type="reset"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #E3735E;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    input[type="submit"]:hover {
+        background-color: #088F8F;
+    }
+    input[type="reset"]:hover {
+        background-color: #C41E3A;
+    }
+    .background-image {
+        background-image: url('https://assets.carpages.ca/dealersite/prod-wp-redline-auto-sales/uploads/2022/03/shutterstock_636632101__1_-scaled-1-e1668026364567.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+
+<body class="background-image">
+<div class="header">
+    <h1>AutoMart - Car Sales</h1>
+</div>
+
+<div class="form-container">
+    <form method="get" action="/../WebCarSalesRESTProject/rest/WebCarSales/searchCarPrice">
+        <h3 class="form-title">Search Car By Price Range</h3>
+        <div class="label-container">
+            <label class="centered-label">Minimum price: <input type="text" name="price1" size="20" /></label>
+            <label class="centered-label">Maximum price: <input type="text" name="price2" size="20" /></label>
+        </div>
+        <br />
+        <input type="submit" name="submit" value="Submit Price Range" />
+        <input type="reset" name="cancel" value="Cancel" />
+    </form>
+</div>
+
+</body>
+</html>

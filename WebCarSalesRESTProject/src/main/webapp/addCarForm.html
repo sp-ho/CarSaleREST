@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add A Car</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+    .banner {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+    .form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
+    .form-title {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 120px;
+        vertical-align: top;
+    }
+    input[type="text"] {
+        width: 220px;
+        padding: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #5F9EA0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    input[type="reset"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: 	#E3735E;
+        color: white;
+        border: none;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    input[type="submit"]:hover {
+        background-color: #088F8F;
+    }
+    input[type="reset"]:hover {
+        background-color: #C41E3A;
+    }
+</style>
+</head>
+<body>
+    <div class="banner">
+        <h1>AutoMart - Car Sales</h1>
+    </div>
+    <div class="form-container">
+        <form method="post" action="/../WebCarSalesRESTProject/rest/WebCarSales/addCar">
+            <h3 class="form-title">Car Input Information</h3>
+            <label>Car ID:</label>
+            <input type="text" name="car_id" size="20" /><br />
+            <br />
+            <label>Make:</label>
+            <input type="text" name="car_make" size="20" /><br />
+            <br />
+            <label>Model:</label>
+            <input type="text" name="car_model" size="20" /><br />
+            <br />
+            <label>Year:</label>
+            <input type="text" name="car_year" size="20" /><br />
+            <br />
+            <label>Description (New/Used):</label>
+            <input type="text" name="car_desc" size="40" /><br />
+            <br />
+            <label>Price ($):</label>
+            <input type="text" name="car_price" size="20" /><br />
+            <br />
+            <label>Image URL:</label>
+            <input type="text" name="car_image_url" size="20" /><br />
+            <br />
+            <input type="submit" name="submit" value="Add Car" />
+            <input type="reset" name="cancel" value="Cancel" />
+        </form>
+        
+    </div>
+</body>
+</html>
